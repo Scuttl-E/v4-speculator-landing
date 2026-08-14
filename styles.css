@@ -1,27 +1,27 @@
 @font-face {
   font-family: Atelier;
-  src: url("../fonts/SourceSans3-Regular.ttf");
+  src: url("./fonts/SourceSans3-Regular.ttf");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: Atelier;
-  src: url("../fonts/SourceSans3-Semibold.ttf");
+  src: url("./fonts/SourceSans3-Semibold.ttf");
   font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
   font-family: Atelier;
-  src: url("../fonts/SourceSans3-Bold.ttf");
+  src: url("./fonts/SourceSans3-Bold.ttf");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("../fonts/GeistMono-Variable.woff2") format("woff2");
+  src: url("./fonts/GeistMono-Variable.woff2") format("woff2");
   font-weight: 100 900;
   font-display: swap;
 }
@@ -179,7 +179,7 @@ nav .nav-cta:hover { border-color: #d4874c88; background: #d4874c20; }
 .scenario-label {
   margin: 0 0 15px;
   color: var(--bright);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .13em;
   text-transform: uppercase;
@@ -385,7 +385,7 @@ h1 {
 .profile-brief section { padding: 38px 0; }
 .profile-brief section:first-child { padding-right: clamp(35px, 6vw, 90px); border-right: 1px solid var(--border); }
 .profile-brief section:last-child { padding-left: clamp(35px, 6vw, 90px); }
-.profile-label { margin: 0; color: var(--bright); font-size: 10px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+.profile-label { margin: 0; color: var(--bright); font-size: 11px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .profile-figure { display: flex; align-items: baseline; gap: 18px; margin: 22px 0 0; }
 .profile-figure strong { color: var(--cream); font: 650 clamp(26px, 2.4vw, 38px) var(--mono); letter-spacing: -.045em; }
 .profile-figure span { color: var(--muted); font-size: 14px; }
