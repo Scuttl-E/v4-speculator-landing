@@ -329,8 +329,10 @@ h1 {
   padding: 58px 0 0;
 }
 .curve-note h3 { max-width: 440px; margin: 0; font-size: 31px; font-weight: 600; line-height: 1.16; letter-spacing: -.025em; }
-.curve-note > p { margin: 0; color: var(--warm); font-size: 17px; line-height: 1.7; }
-.curve-note > p strong { color: var(--cream); font-weight: 600; }
+.curve-note-copy { color: var(--warm); font-size: 17px; line-height: 1.7; }
+.curve-note-copy p { margin: 0; }
+.curve-note-copy p + p { margin-top: 20px; }
+.curve-note-copy strong { color: var(--cream); font-weight: 600; }
 
 .scenarios { padding-top: 80px; }
 .scenarios-heading { margin-bottom: 52px; }
@@ -542,7 +544,7 @@ footer p { margin: 0; color: var(--muted); font-size: 12px; text-align: center; 
   .overview-index li span { margin: 0; }
   .curve-note { padding-top: 42px; }
   .curve-note h3 { font-size: 28px; }
-  .curve-note > p { font-size: 16px; }
+  .curve-note-copy { font-size: 16px; }
   .scenario-tabs { grid-template-columns: 1fr; }
   .scenario-tabs button { min-height: 102px; }
   .scenario-panel { padding-top: 55px; }
