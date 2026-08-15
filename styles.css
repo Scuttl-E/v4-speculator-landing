@@ -274,9 +274,9 @@ h1 {
 .notice-wrap { padding: 0 clamp(24px, 6vw, 108px); }
 .notice {
   display: grid;
-  grid-template-columns: minmax(110px, .18fr) minmax(0, 1.82fr);
+  grid-template-columns: 150px minmax(0, 1fr);
   align-items: center;
-  gap: clamp(24px, 4vw, 70px);
+  gap: clamp(24px, 2.5vw, 36px);
   max-width: 1600px;
   margin: 0 auto;
   padding: 30px clamp(24px, 3.5vw, 52px);
