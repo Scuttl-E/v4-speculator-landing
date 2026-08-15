@@ -391,7 +391,7 @@ h1 {
 .profile-label { margin: 0; color: var(--bright); font-size: clamp(14px, 1vw, 16px); font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
 .profile-figure { display: flex; align-items: baseline; gap: 18px; margin: 22px 0 0; }
 .profile-figure strong { color: var(--cream); font: 650 clamp(26px, 2.4vw, 38px) var(--mono); letter-spacing: -.045em; }
-.profile-figure span { color: var(--muted); font-size: 14px; }
+.profile-figure span { color: var(--muted); font-size: 16px; }
 .profile-position > p:last-child { max-width: 760px; margin: 22px 0 0; color: var(--warm); font-size: 17px; line-height: 1.65; }
 .profile-goals ul { display: grid; gap: 13px; margin: 24px 0 0; padding: 0; list-style: none; }
 .profile-goals li { position: relative; padding-left: 20px; color: var(--warm); font-size: 16px; line-height: 1.5; }
