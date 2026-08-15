@@ -285,7 +285,7 @@ h1 {
   background: linear-gradient(90deg, #d4874c18, #171818bb 60%);
   box-shadow: inset 0 1px #ffe3c515;
 }
-.notice-label { align-self: stretch; display: flex; align-items: center; border-right: 1px solid #d4874c45; color: var(--bright); font: 700 13px var(--mono); letter-spacing: .15em; text-transform: uppercase; }
+.notice-label { align-self: stretch; display: flex; align-items: center; justify-content: center; border-right: 1px solid #d4874c45; color: var(--bright); font: 700 13px var(--mono); letter-spacing: .15em; text-align: center; text-transform: uppercase; }
 .notice-copy { min-width: 0; }
 .notice strong { display: block; color: #f1d8bf; font-size: clamp(17px, 1.4vw, 21px); line-height: 1.38; letter-spacing: .055em; }
 .notice p { margin: 9px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
