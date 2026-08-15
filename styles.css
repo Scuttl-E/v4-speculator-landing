@@ -549,11 +549,11 @@ footer p { margin: 0; color: var(--muted); font-size: 12px; text-align: center; 
   nav > a:not(.nav-cta) { display: none; }
   nav .nav-cta { padding: 7px 10px; font-size: 12px; }
   .hero { gap: 70px; padding: 90px 20px 65px; }
-  .hero::before { background-position: calc(61% + 16px) calc(50% - 30px); opacity: .76; }
+  .hero::before { background-position: calc(61% + 16px) calc(50% - 30px); opacity: .64; }
   .hero::after {
     background:
       linear-gradient(90deg, #0b0c0cf9 0%, #0b0c0ce7 50%, #0b0c0c96 77%, #0b0c0c4e 100%),
-      linear-gradient(180deg, #0b0c0ca8 0%, transparent 45%, #0b0c0cd1 100%);
+      linear-gradient(180deg, #0b0c0ca8 0%, transparent 45%, #0b0c0c73 68%, #0b0c0cc7 84%, #0b0c0cf2 100%);
   }
   h1 { font-size: clamp(48px, 15vw, 72px); }
   .hero-actions { flex-direction: column; }
