@@ -9,7 +9,7 @@
     />
     <meta name="theme-color" content="#0b0c0c" />
     <title>V4 Speculator: Overview &amp; Scenarios</title>
-    <link rel="stylesheet" href="./styles.css?v=20260815-13" />
+    <link rel="stylesheet" href="./styles.css?v=20260816-hero-left-fade" />
     <script src="./script.js" defer></script>
   </head>
   <body>
@@ -55,40 +55,6 @@
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Illustrative V4 position response">
-          <div class="visual-head">
-            <div>
-              <small>Strategy response</small>
-              <strong>V4 return vs ETH move</strong>
-            </div>
-            <span class="live-pill"><i></i> Model view</span>
-          </div>
-          <svg viewBox="0 0 680 360" role="img" aria-label="A convex V4 curve compared with a linear spot line">
-            <defs>
-              <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#dc8b50" stop-opacity=".28" />
-                <stop offset="1" stop-color="#dc8b50" stop-opacity="0" />
-              </linearGradient>
-              <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="5" result="blur" />
-                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-              </filter>
-            </defs>
-            <g class="chart-grid">
-              <path d="M42 40H650M42 105H650M42 170H650M42 235H650M42 300H650" />
-              <path d="M42 40V300M194 40V300M346 40V300M498 40V300M650 40V300" />
-            </g>
-            <path class="spot-line" d="M42 286L650 90" />
-            <path class="curve-area" d="M42 269C168 319 249 271 346 214C464 145 545 100 650 39L650 300L42 300Z" />
-            <path class="v4-line" filter="url(#glow)" d="M42 269C168 319 249 271 346 214C464 145 545 100 650 39" />
-            <circle class="chart-point" cx="346" cy="214" r="5" />
-            <circle class="chart-point end" cx="650" cy="39" r="6" />
-          </svg>
-          <div class="visual-legend">
-            <span><i class="legend-v4"></i> V4 strategy combined</span>
-            <span><i class="legend-spot"></i> ETH value: spot</span>
-          </div>
-        </div>
       </section>
 
       <section class="notice-wrap" aria-label="Important model information">
