@@ -1,425 +1,476 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Three worked scenarios showing how the unofficial V4 Speculator model compares V4 positions with spot ETH, lending positions, and perpetual futures."
-    />
-    <meta name="theme-color" content="#0b0c0c" />
-    <title>V4 Speculator: Overview &amp; Scenarios</title>
-    <link rel="preload" as="image" href="./assets/podded-hero-dashboard.webp" type="image/webp" fetchpriority="high" />
-    <link rel="stylesheet" href="./styles.css?v=20260816-asset-optimisation" />
-    <script src="./script.js" defer></script>
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="../" aria-label="V4 Speculator calculator">
-        <span class="brand-mark">V4</span>
-        <span>V4 Speculator</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#overview">Overview</a>
-        <a href="#scenarios">Scenarios</a>
-        <a class="nav-cta" href="https://scuttl-e.github.io/v4-speculator-calculator/">Open calculator <span aria-hidden="true">↗</span></a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Three worked scenarios showing how the unofficial V4 Speculator model compares V4 positions with spot ETH, lending positions, and perpetual futures." />
+  <meta name="theme-color" content="#0b0c0c" />
+  <title>V4 Speculator: Overview &amp; Scenarios</title>
+  <link rel="preload" as="image" href="./assets/podded-hero-dashboard.webp" type="image/webp" fetchpriority="high" />
+  <link rel="stylesheet" href="./styles.css?v=20260816-asset-optimisation" />
+  <script src="./script.js" defer></script>
+</head>
 
-    <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-grid" aria-hidden="true"></div>
-        <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
-        <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> Unofficial V4 scenario model</p>
-          <h1 id="hero-title">See what your position could become.</h1>
-          <p class="hero-lead">
-            Explore three worked scenarios modelling how spot ETH, a leveraged lending position, or a perpetual long
-            could behave if converted into a Peapods V4 position, then use the calculator to explore your own position.
-          </p>
-          <div class="hero-actions">
-            <a
-              class="button button-secondary"
-              href="https://github.com/Scuttl-E/v4-speculator-calculator"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View on GitHub <span aria-hidden="true">↗</span>
-            </a>
-            <a class="button button-primary" href="https://scuttl-e.github.io/v4-speculator-calculator/">
-              Open the live calculator <span aria-hidden="true">↗</span>
-            </a>
-          </div>
+  <header class="site-header">
+    <a class="brand" href="../" aria-label="V4 Speculator calculator">
+      <span class="brand-mark">V4</span>
+      <span>V4 Speculator</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#scenarios">Scenarios</a>
+      <a class="nav-cta" href="https://scuttl-e.github.io/v4-speculator-calculator/">Open calculator <span
+          aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit hero-orbit-two" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Unofficial V4 scenario model</p>
+        <h1 id="hero-title">See what your position could become.</h1>
+        <p class="hero-lead">
+          Explore three worked scenarios modelling how spot ETH, a leveraged lending position, or a perpetual long
+          could behave if converted into a Peapods V4 position, then use the calculator to explore your own position.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="https://github.com/Scuttl-E/v4-speculator-calculator" target="_blank"
+            rel="noreferrer">
+            View on GitHub <span aria-hidden="true">↗</span>
+          </a>
+          <a class="button button-primary" href="https://scuttl-e.github.io/v4-speculator-calculator/">
+            Open the live calculator <span aria-hidden="true">↗</span>
+          </a>
         </div>
-
-      </section>
-
-      <section class="notice-wrap" aria-label="Important model information">
-        <div class="notice">
-          <span class="notice-label">Disclaimer</span>
-          <div class="notice-copy">
-            <strong>THIS IS A SPECULATIVE HOBBY PROJECT BUILT AROUND THE V4 INFORMATION AVAILABLE SO FAR. TREAT THE RESULTS AS SPECULATIVE.</strong>
-            <p>Treat every result as a scenario estimate, not an official protocol quote, prediction, or financial advice.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="overview section-shell" id="overview" aria-labelledby="overview-title">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> What the model does</p>
-          <h2 id="overview-title">Compare the position you have with the exposure you want.</h2>
-        </div>
-
-        <div class="overview-editorial">
-          <div class="overview-copy">
-            <p class="overview-lead">
-              This calculator models potential Peapods V4 position profiles and compares them with spot, lending and
-              perpetual positions. The Harvester extends the model by planning scheduled withdrawals as price targets
-              are reached.
-            </p>
-          </div>
-          <aside class="overview-index" aria-label="Model capabilities">
-            <p class="kicker">Explore the model</p>
-            <ol>
-              <li><span>01</span> Create Long, Short or combined V4 positions with different leverage and cashback configurations.</li>
-              <li><span>02</span> Compare a V4 position against holding spot, or against an existing lending or perpetual position.</li>
-              <li><span>03</span> Plan how and when capital is harvested from the V4 position with the Harvester tool.</li>
-            </ol>
-          </aside>
-        </div>
-
-        <div class="curve-note">
-          <div>
-            <p class="kicker">Model scope</p>
-            <h3>A baseline for price response.</h3>
-          </div>
-          <div class="curve-note-copy">
-            <p>
-              The displayed V4 curves are <strong>price-only base curves</strong>. They do not add Volatility Farming
-              yield or subtract borrowing, rebalancing and execution costs. At this base-curve level, the model is
-              also time-independent and path-independent: a given asset price move produces the same modelled result
-              regardless of how long it takes to occur or the price path taken to reach it.
-            </p>
-            <p>
-              In practise, the path matters. Peapods’ design uses volatility-generated yield alongside automatic
-              rebalancing, so a more volatile route to the same final price may generate additional yield that the
-              base curve does not capture. That yield is intended to offset or exceed the costs of maintaining the
-              leveraged position, while potentially adding further return.
-            </p>
-            <p>
-              The displayed curves should therefore be read as a <strong>structural baseline for price response</strong>,
-              not an estimate of total realised return. The model is built from the V4 mechanics and examples made
-              public so far, and its assumptions may need refinement as fuller specifications and live performance
-              data become available.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="scenarios section-shell" id="scenarios" aria-labelledby="scenarios-title">
-        <div class="section-heading scenarios-heading">
-          <p class="eyebrow"><span></span> Scenario analysis</p>
-          <h2 id="scenarios-title">Three positions. Three different reasons to rethink the trade.</h2>
-          <p>
-            Each example converts the user’s current net equity into V4 and follows both positions across
-            the same range of ETH price moves.
-          </p>
-        </div>
-
-        <div class="scenario-tabs" role="tablist" aria-label="Choose a scenario">
-          <button id="tab-spot" role="tab" aria-selected="true" aria-controls="panel-spot" tabindex="0">
-            <span class="tab-letter">A</span>
-            <span class="scenario-tab-copy"><small>Scenario A</small><strong>Spot asset holder</strong><em>Stay long. Plan the exits.</em></span>
-          </button>
-          <button id="tab-lending" role="tab" aria-selected="false" aria-controls="panel-lending" tabindex="-1">
-            <span class="tab-letter">B</span>
-            <span class="scenario-tab-copy"><small>Scenario B</small><strong>Lending position</strong><em>Remove the liquidation cliff.</em></span>
-          </button>
-          <button id="tab-perp" role="tab" aria-selected="false" aria-controls="panel-perp" tabindex="-1">
-            <span class="tab-letter">C</span>
-            <span class="scenario-tab-copy"><small>Scenario C</small><strong>Perpetual long</strong><em>Protect equity. Keep upside.</em></span>
-          </button>
-        </div>
-
-        <div class="scenario-panel" id="panel-spot" role="tabpanel" tabindex="0" aria-labelledby="tab-spot">
-          <div class="scenario-intro">
-            <p class="scenario-label">Scenario A · Spot asset holder</p>
-            <h3>Stay exposed to the bull case. Build the exits in advance.</h3>
-          </div>
-
-          <div class="profile-brief">
-            <section class="profile-position">
-              <p class="profile-label">Current position &amp; standpoint</p>
-              <p class="profile-figure"><strong>10 ETH</strong><span>$15,000 at a $1,500 ETH price</span></p>
-              <p>
-                The user believes ETH can reach $10,000 within their time horizon, while accepting that it may first
-                trade back toward the $1,000 level. They want to remain positioned for that full upside range rather
-                than reduce their exposure early.
-              </p>
-            </section>
-            <section class="profile-goals">
-              <p class="profile-label">Goals</p>
-              <ul>
-                <li>Maintain maximal ETH exposure until the $10,000 target is reached.</li>
-                <li>Take profits at $4,000, $5,000, $7,000 and $8,500.</li>
-                <li>Keep liquidation risk low by avoiding traditional leverage.</li>
-              </ul>
-            </section>
-          </div>
-
-          <div class="modelled-position">
-            <p class="profile-label">Modelled V4 position</p>
-            <p><strong>50%</strong> allocated to a 2.5× Long <span>+</span> <strong>50%</strong> allocated to a 2× Short.</p>
-            <small>The structure is designed to combine defensive downside behaviour with increasingly convex upside exposure.</small>
-          </div>
-
-          <article class="media-story">
-            <div class="story-copy">
-              <span class="story-index">01</span>
-              <p class="kicker">Shape the range</p>
-              <h4>Convex upside with a defensive short component.</h4>
-              <p>
-                The combined orange curve is built from a 2.5× long and a 2× short. The short component
-                softens adverse moves; as ETH rises, the long component increasingly drives the combined result away from spot.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/spot-main.png" data-caption="Spot scenario: full-range strategy response">
-                <img src="./assets/spot-main.png" alt="Full-range V4 strategy response compared with holding 10 ETH" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>Full planned range: combined V4, component curves and the 10 ETH spot benchmark.</figcaption>
-            </figure>
-          </article>
-
-          <article class="media-story reverse">
-            <div class="story-copy">
-              <span class="story-index">02</span>
-              <p class="kicker">Inspect the construction</p>
-              <h4>The same $15,000, reorganised.</h4>
-              <p>
-                The detailed view confirms the equal allocation, modelled drawdown and exact comparison points.
-                At −40%, the model retains $11,200 versus $9,000 in spot; at +570%, it reaches $362,360 versus $100,500.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/spot-breakdown.png" data-caption="Spot scenario: position and outcome breakdown">
-                <img src="./assets/spot-breakdown.png" alt="Spot scenario controls, chart, scenario table and position breakdown" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>Position structure and exact values across the user’s planned ETH range.</figcaption>
-            </figure>
-          </article>
-
-          <article class="media-story">
-            <div class="story-copy">
-              <span class="story-index">03</span>
-              <p class="kicker">Harvest the route</p>
-              <h4>Take $81,325 off the table and keep the position working.</h4>
-              <p>
-                Four checkpoints mirror the user’s profit targets. By +570%, the plan shows $81,325 harvested,
-                $140,585 remaining as active V4 and $221,910 total wealth. The active V4 alone remains $40,085 above spot.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/spot-harvest.png" data-caption="Spot scenario: custom harvest plan">
-                <img src="./assets/spot-harvest.png" alt="Custom spot scenario harvest route at four ETH price checkpoints" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>Checkpoints at roughly +166%, +233%, +366% and +466% map to $4k, $5k, $7k and $8.5k ETH.</figcaption>
-            </figure>
-          </article>
-        </div>
-
-        <div class="scenario-panel" id="panel-lending" role="tabpanel" tabindex="0" aria-labelledby="tab-lending" hidden>
-          <div class="scenario-intro">
-            <p class="scenario-label">Scenario B · Lending position</p>
-            <h3>Remove the liquidation cliff without abandoning the upside.</h3>
-          </div>
-
-          <div class="profile-brief">
-            <section class="profile-position">
-              <p class="profile-label">Current position &amp; standpoint</p>
-              <p class="profile-figure"><strong>20 ETH</strong><span>$30,000 collateral · $15,000 debt · $15,000 net equity</span></p>
-              <p>
-                The position liquidates at 85% LTV, approximately $882 ETH. The user is prepared to hold for the long
-                term and expects ETH may eventually reach $7,500, but considers a move below $1,000 possible first
-                and has no immediate plan to sell.
-              </p>
-            </section>
-            <section class="profile-goals">
-              <p class="profile-label">Goals</p>
-              <ul>
-                <li>Hedge the existing position and prevent liquidation through the expected lower range.</li>
-                <li>Preserve as much upside as possible if the longer-term target is reached.</li>
-                <li>Release an additional $3,000 in the most capital-efficient way available.</li>
-              </ul>
-            </section>
-          </div>
-
-          <div class="modelled-position">
-            <p class="profile-label">Modelled V4 position</p>
-            <p><strong>60%</strong> allocated to a 2.5× Long <span>+</span> <strong>40%</strong> allocated to a 2× Cashback Short, releasing <strong>$3,000</strong> in cash.</p>
-            <small>The short-side component is used to defend the lower range while the larger long allocation protects the bullish objective.</small>
-          </div>
-
-          <article class="media-story">
-            <div class="story-copy">
-              <span class="story-index">01</span>
-              <p class="kicker">Replace the cliff</p>
-              <h4>The original position ends at $882. The V4 curve does not.</h4>
-              <p>
-                The lending comparator reaches its liquidation boundary at a −41.18% ETH move. The modelled V4
-                position continues across the range, preserving $11,040 at −60% and $17,160 at −80%.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/lending-main.png" data-caption="Lending scenario: full-range strategy response">
-                <img src="./assets/lending-main.png" alt="V4 strategy compared with a lending position and its liquidation boundary" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>The liquidation boundary and the expanding V4 edge are visible across the full range.</figcaption>
-            </figure>
-          </article>
-
-          <article class="media-story reverse">
-            <div class="story-copy">
-              <span class="story-index">02</span>
-              <p class="kicker">Accept a narrow trade-off</p>
-              <h4>Slightly behind first. Increasingly ahead later.</h4>
-              <p>
-                At +100%, V4 is $42,000 versus $45,000 in the lending position. By +200%, V4 is ahead;
-                at +400%, the model shows $234,600 versus $135,000. The short-side defence is paid for by a small early-upside gap.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/lending-breakdown.png" data-caption="Lending scenario: position and outcome breakdown">
-                <img src="./assets/lending-breakdown.png" alt="Lending scenario controls, chart, comparison table and V4 position breakdown" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>Inputs, 60/40 construction, exact scenario values and the $3,000 cashback release.</figcaption>
-            </figure>
-          </article>
-        </div>
-
-        <div class="scenario-panel" id="panel-perp" role="tabpanel" tabindex="0" aria-labelledby="tab-perp" hidden>
-          <div class="scenario-intro">
-            <p class="scenario-label">Scenario C · Perpetual long</p>
-            <h3>Stop defending margin. Keep a credible route into the bull case.</h3>
-          </div>
-
-          <div class="profile-brief">
-            <section class="profile-position">
-              <p class="profile-label">Current position &amp; standpoint</p>
-              <p class="profile-figure"><strong>20 ETH long</strong><span>$1,800 entry · $1,500 current price · $13,200 margin</span></p>
-              <p>
-                The position carries a $6,000 unrealised loss, leaving $7,200 of current net equity and approximately
-                4.17× effective exposure. Liquidation sits at $1,200. They remain long-term bullish but no longer want
-                to keep defending the margin position.
-              </p>
-            </section>
-            <section class="profile-goals">
-              <p class="profile-label">Goals</p>
-              <ul>
-                <li>Protect the remaining equity against another adverse move.</li>
-                <li>Maintain as much bullish exposure as possible without the supplied perp liquidation boundary.</li>
-                <li>Recover capital on an upturn for use in future speculative perp positions.</li>
-              </ul>
-            </section>
-          </div>
-
-          <div class="modelled-position">
-            <p class="profile-label">Modelled V4 position</p>
-            <p><strong>100%</strong> allocated to a 2.5× Long using the position’s current <strong>$7,200</strong> net equity.</p>
-            <small>The comparison deliberately rebases onto the equity that remains today, rather than the original margin.</small>
-          </div>
-
-          <article class="media-story">
-            <div class="story-copy">
-              <span class="story-index">01</span>
-              <p class="kicker">Trade the liquidation line</p>
-              <h4>Less immediate upside than the perp. Far more room to be wrong.</h4>
-              <p>
-                The existing perp liquidates at $1,200. At that same −20% move, the modelled V4 position retains
-                $4,608. Spot is included to show how much exposure would be surrendered by simply closing into unleveraged ETH.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/perp-main.png" data-caption="Perpetual scenario: full-range strategy response">
-                <img src="./assets/perp-main.png" alt="V4 strategy compared with a perpetual long, spot ETH and the perp liquidation boundary" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>V4, the original perp and spot compared against the same ETH moves.</figcaption>
-            </figure>
-          </article>
-
-          <article class="media-story reverse">
-            <div class="story-copy">
-              <span class="story-index">02</span>
-              <p class="kicker">Rebase onto current equity</p>
-              <h4>The comparison begins from the $7,200 that remains.</h4>
-              <p>
-                The original perp leads through the early upside range, but V4 keeps building without its liquidation boundary or ongoing funding drag. That makes a longer horizon viable and shifts the focus toward recovering capital along the way.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/perp-breakdown.png" data-caption="Perpetual scenario: position and outcome breakdown">
-                <img src="./assets/perp-breakdown.png" alt="Perpetual position inputs, comparison table and V4 position breakdown" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>The 4.17× perp exposure, $1,200 liquidation and $7,200 V4 deposit in one view.</figcaption>
-            </figure>
-          </article>
-
-          <article class="media-story">
-            <div class="story-copy">
-              <span class="story-index">03</span>
-              <p class="kicker">Recover the margin</p>
-              <h4>Extract $13,200 over six periods, then let the remainder run.</h4>
-              <p>
-                With the longer horizon established, a custom six-checkpoint harvest withdraws 20% at each stage, recovering the full original margin by +180%. At +500%, $156,828 remains active in V4 and total wealth reaches $170,028.
-              </p>
-            </div>
-            <figure>
-              <button class="image-button" data-lightbox="./assets/perp-harvest.png" data-caption="Perpetual scenario: fastest capital recovery plan">
-                <img src="./assets/perp-harvest.png" alt="Perpetual scenario fastest capital recovery harvest plan" loading="lazy" />
-                <span>Expand image</span>
-              </button>
-              <figcaption>Six 20% harvest checkpoints recover the original margin while maintaining the active V4 curve.</figcaption>
-            </figure>
-          </article>
-        </div>
-      </section>
-
-      <section class="closing section-shell">
-        <div>
-          <p class="eyebrow"><span></span> Explore your own range</p>
-          <h2>Turn the examples into your scenario.</h2>
-          <p>Change the position, constraints and price targets in the live calculator, then inspect every curve and equation.</p>
-        </div>
-        <a class="button button-primary" href="https://scuttl-e.github.io/v4-speculator-calculator/">Open the live calculator <span aria-hidden="true">↗</span></a>
-      </section>
-    </main>
-
-    <footer>
-      <a class="brand footer-brand" href="https://scuttl-e.github.io/v4-speculator-calculator/"><span class="brand-mark">V4</span><span>V4 Speculator</span></a>
-      <p>Independent, unofficial and experimental. Not affiliated with or endorsed by Peapods Finance.</p>
-      <div class="footer-actions">
-        <a class="footer-credit" href="https://x.com/chainsandtrains" target="_blank" rel="noreferrer" aria-label="Created by Scuttle.eth">
-          <span>CREATED BY-</span><strong>SCUTTLE.ETH</strong>
-        </a>
-        <a class="footer-github" href="https://github.com/Scuttl-E/v4-speculator-calculator" target="_blank" rel="noreferrer">Source on GitHub ↗</a>
       </div>
-    </footer>
 
-    <dialog class="lightbox" aria-label="Expanded scenario image">
-      <form method="dialog"><button class="lightbox-close" aria-label="Close expanded image">×</button></form>
-      <img src="" alt="" />
-      <p></p>
-    </dialog>
-  </body>
+    </section>
+
+    <section class="notice-wrap" aria-label="Important model information">
+      <div class="notice">
+        <span class="notice-label">Disclaimer</span>
+        <div class="notice-copy">
+          <strong>THIS IS A SPECULATIVE HOBBY PROJECT BUILT AROUND THE V4 INFORMATION AVAILABLE SO FAR. TREAT THE
+            RESULTS AS SPECULATIVE.</strong>
+          <p>Treat every result as a scenario estimate, not an official protocol quote, prediction, or financial advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview section-shell" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading">
+        <p class="eyebrow"><span></span> What the model does</p>
+        <h2 id="overview-title">Compare the position you have with the exposure you want.</h2>
+      </div>
+
+      <div class="overview-editorial">
+        <div class="overview-copy">
+          <p class="overview-lead">
+            This calculator models potential Peapods V4 position profiles and compares them with spot, lending and
+            perpetual positions. The Harvester extends the model by planning scheduled withdrawals as price targets
+            are reached.
+          </p>
+        </div>
+        <aside class="overview-index" aria-label="Model capabilities">
+          <p class="kicker">Explore the model</p>
+          <ol>
+            <li><span>01</span> Create Long, Short or combined V4 positions with different leverage and cashback
+              configurations.</li>
+            <li><span>02</span> Compare a V4 position against holding spot, or against an existing lending or perpetual
+              position.</li>
+            <li><span>03</span> Plan how and when capital is harvested from the V4 position with the Harvester tool.
+            </li>
+          </ol>
+        </aside>
+      </div>
+
+      <div class="curve-note">
+        <div>
+          <p class="kicker">Model scope</p>
+          <h3>A baseline for price response.</h3>
+        </div>
+        <div class="curve-note-copy">
+          <p>
+            The displayed V4 curves are <strong>price-only base curves</strong>. They do not add Volatility Farming
+            yield or subtract borrowing, rebalancing and execution costs. At this base-curve level, the model is
+            also time-independent and path-independent: a given asset price move produces the same modelled result
+            regardless of how long it takes to occur or the price path taken to reach it.
+          </p>
+          <p>
+            In practice, the path matters. Peapods’ design uses volatility-generated yield alongside automatic
+            rebalancing, so a more volatile route to the same final price may generate additional yield that the
+            base curve does not capture. That yield is intended to offset or exceed the costs of maintaining the
+            leveraged position, while potentially adding further return.
+          </p>
+          <p>
+            The displayed curves should therefore be read as a <strong>structural baseline for price response</strong>,
+            not an estimate of total realised return. The model is built from the V4 mechanics and examples made
+            public so far, and its assumptions may need refinement as fuller specifications and live performance
+            data become available.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="scenarios section-shell" id="scenarios" aria-labelledby="scenarios-title">
+      <div class="section-heading scenarios-heading">
+        <p class="eyebrow"><span></span> Scenario analysis</p>
+        <h2 id="scenarios-title">Three positions. Three different reasons to rethink the trade.</h2>
+        <p>
+          Each example converts the user’s current net equity into V4 and follows both positions across
+          the same range of ETH price moves.
+        </p>
+      </div>
+
+      <div class="scenario-tabs" role="tablist" aria-label="Choose a scenario">
+        <button id="tab-spot" role="tab" aria-selected="true" aria-controls="panel-spot" tabindex="0">
+          <span class="tab-letter">A</span>
+          <span class="scenario-tab-copy"><small>Scenario A</small><strong>Spot asset holder</strong><em>Stay long. Plan
+              the exits.</em></span>
+        </button>
+        <button id="tab-lending" role="tab" aria-selected="false" aria-controls="panel-lending" tabindex="-1">
+          <span class="tab-letter">B</span>
+          <span class="scenario-tab-copy"><small>Scenario B</small><strong>Lending position</strong><em>Remove the
+              liquidation cliff.</em></span>
+        </button>
+        <button id="tab-perp" role="tab" aria-selected="false" aria-controls="panel-perp" tabindex="-1">
+          <span class="tab-letter">C</span>
+          <span class="scenario-tab-copy"><small>Scenario C</small><strong>Perpetual long</strong><em>Protect equity.
+              Keep upside.</em></span>
+        </button>
+      </div>
+
+      <div class="scenario-panel" id="panel-spot" role="tabpanel" tabindex="0" aria-labelledby="tab-spot">
+        <div class="scenario-intro">
+          <p class="scenario-label">Scenario A · Spot asset holder</p>
+          <h3>Stay exposed to the bull case. Build the exits in advance.</h3>
+        </div>
+
+        <div class="profile-brief">
+          <section class="profile-position">
+            <p class="profile-label">Current position &amp; standpoint</p>
+            <p class="profile-figure"><strong>10 ETH</strong><span>$15,000 at a $1,500 ETH price</span></p>
+            <p>
+              The user believes ETH can reach $10,000 within their time horizon, while accepting that it may first
+              trade back toward the $1,000 level. They want to remain positioned for that full upside range rather
+              than reduce their exposure early.
+            </p>
+          </section>
+          <section class="profile-goals">
+            <p class="profile-label">Goals</p>
+            <ul>
+              <li>Maintain maximal ETH exposure until the $10,000 target is reached.</li>
+              <li>Take profits at $4,000, $5,000, $7,000 and $8,500.</li>
+              <li>Keep liquidation risk low by avoiding traditional leverage.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="modelled-position">
+          <p class="profile-label">Modelled V4 position</p>
+          <p><strong>50%</strong> allocated to a 2.5× Long <span>+</span> <strong>50%</strong> allocated to a 2× Short.
+          </p>
+          <small>The structure is designed to combine defensive downside behaviour with increasingly convex upside
+            exposure.</small>
+        </div>
+
+        <article class="media-story">
+          <div class="story-copy">
+            <span class="story-index">01</span>
+            <p class="kicker">Shape the range</p>
+            <h4>Convex upside with a defensive short component.</h4>
+            <p>
+              This is more than downside protection. The 2× Short can become profitable enough on a severe ETH decline
+              to push the combined position above its starting value, while the 2.5× Long increasingly dominates on the
+              way up. The result is a position designed to extract value from both directions while retaining strongly
+              convex upside.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/spot-main.png"
+              data-caption="Spot scenario: full-range strategy response">
+              <img src="./assets/spot-main.png" alt="Full-range V4 strategy response compared with holding 10 ETH"
+                loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>Full planned range: combined V4, component curves and the 10 ETH spot benchmark.</figcaption>
+          </figure>
+        </article>
+
+        <article class="media-story reverse">
+          <div class="story-copy">
+            <span class="story-index">02</span>
+            <p class="kicker">Inspect the construction</p>
+            <h4>Turn the curve into concrete outcomes.</h4>
+            <p>
+              The detailed view shows the position’s exact value, return from entry and V4 edge over spot across the
+              planned price range. At −40%, V4 retains $11,200 versus $9,000 in spot; at the $10,000 target, it reaches
+              $362,360 versus $100,500, a V4 edge of $261,860.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/spot-breakdown.png"
+              data-caption="Spot scenario: position and outcome breakdown">
+              <img src="./assets/spot-breakdown.png"
+                alt="Spot scenario controls, chart, scenario table and position breakdown" loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>Position structure and exact values across the user’s planned ETH range.</figcaption>
+          </figure>
+        </article>
+
+        <article class="media-story">
+          <div class="story-copy">
+            <span class="story-index">03</span>
+            <p class="kicker">Harvest the route</p>
+            <h4>Harvest $81,325 while keeping the remaining V4 position active.</h4>
+            <p>
+              Four checkpoints match the planned profit targets. By the $10,000 ETH target, the plan has harvested
+              $81,325 while leaving $140,585 still active in V4, for $221,910 total wealth. The remaining V4 position
+              alone is still $40,085 ahead of holding spot at the target.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/spot-harvest.png"
+              data-caption="Spot scenario: custom harvest plan">
+              <img src="./assets/spot-harvest.png"
+                alt="Custom spot scenario harvest route at four ETH price checkpoints" loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>Checkpoints at roughly +166%, +233%, +366% and +466% map to $4k, $5k, $7k and $8.5k ETH.
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <div class="scenario-panel" id="panel-lending" role="tabpanel" tabindex="0" aria-labelledby="tab-lending" hidden>
+        <div class="scenario-intro">
+          <p class="scenario-label">Scenario B · Lending position</p>
+          <h3>Remove the liquidation cliff without abandoning the upside.</h3>
+        </div>
+
+        <div class="profile-brief">
+          <section class="profile-position">
+            <p class="profile-label">Current position &amp; standpoint</p>
+            <p class="profile-figure"><strong>20 ETH</strong><span>$30,000 collateral · $15,000 debt · $15,000 net
+                equity</span></p>
+            <p>
+              The position reaches its 85% LTV liquidation threshold at approximately $882 per ETH. The user is prepared to hold for the long
+              term and expects ETH may eventually reach $7,500, but considers a move below $1,000 possible first
+              and has no immediate plan to sell.
+            </p>
+          </section>
+          <section class="profile-goals">
+            <p class="profile-label">Goals</p>
+            <ul>
+              <li>Hedge the existing position and prevent liquidation through the expected lower range.</li>
+              <li>Preserve as much upside as possible if the longer-term target is reached.</li>
+              <li>Release an additional $3,000 in the most capital-efficient way available.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="modelled-position">
+          <p class="profile-label">Modelled V4 position</p>
+          <p><strong>60%</strong> allocated to a 2.5× Long <span>+</span> <strong>40%</strong> allocated to a 2×
+            Cashback Short, releasing <strong>$3,000</strong> in cash.</p>
+          <small>The short-side component is used to defend the lower range while the larger long allocation protects
+            the bullish objective.</small>
+        </div>
+
+        <article class="media-story">
+          <div class="story-copy">
+            <span class="story-index">01</span>
+            <p class="kicker">Replace the cliff</p>
+            <h4>The original position ends at $882. The V4 curve does not.</h4>
+            <p>
+              The lending position reaches liquidation after a 41.18% decline in ETH, fixing a hard endpoint for the trade.
+              The modelled V4 position remains active through the lower range, retaining $11,040 at −60% and rising to
+              $17,160 at −80% as the short component increasingly benefits from the deeper decline.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/lending-main.png"
+              data-caption="Lending scenario: full-range strategy response">
+              <img src="./assets/lending-main.png"
+                alt="V4 strategy compared with a lending position and its liquidation boundary" loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>The liquidation boundary and the expanding V4 edge are visible across the full range.
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="media-story reverse">
+          <div class="story-copy">
+            <span class="story-index">02</span>
+            <p class="kicker">Accept a narrow trade-off</p>
+            <h4>A modest early cost for a widening V4 edge.</h4>
+            <p>
+              The defensive structure creates a modest cost on the earlier upside: at +100%, V4 is $42,000 versus
+              $45,000 in the lending position. By +200%, that gap has reversed; at +400%, V4 reaches $234,600 versus
+              $135,000, a $99,600 V4 edge.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/lending-breakdown.png"
+              data-caption="Lending scenario: position and outcome breakdown">
+              <img src="./assets/lending-breakdown.png"
+                alt="Lending scenario controls, chart, comparison table and V4 position breakdown" loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>Inputs, 60/40 construction, exact scenario values and the $3,000 cashback release.</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <div class="scenario-panel" id="panel-perp" role="tabpanel" tabindex="0" aria-labelledby="tab-perp" hidden>
+        <div class="scenario-intro">
+          <p class="scenario-label">Scenario C · Perpetual long</p>
+          <h3>Stop defending margin. Keep a credible route into the bull case.</h3>
+        </div>
+
+        <div class="profile-brief">
+          <section class="profile-position">
+            <p class="profile-label">Current position &amp; standpoint</p>
+            <p class="profile-figure"><strong>20 ETH long</strong><span>$1,800 entry · $1,500 current price · $13,200
+                margin</span></p>
+            <p>
+              The position carries a $6,000 unrealised loss, leaving $7,200 of current net equity and approximately
+              4.17× effective exposure. Liquidation sits at $1,200. They remain long-term bullish but no longer want
+              to keep defending the margin position.
+            </p>
+          </section>
+          <section class="profile-goals">
+            <p class="profile-label">Goals</p>
+            <ul>
+              <li>Protect the remaining equity against another adverse move.</li>
+              <li>Maintain as much bullish exposure as possible without the supplied perp liquidation boundary.</li>
+              <li>Recover capital on an upturn for use in future speculative perp positions.</li>
+            </ul>
+          </section>
+        </div>
+
+        <div class="modelled-position">
+          <p class="profile-label">Modelled V4 position</p>
+          <p><strong>100%</strong> allocated to a 2.5× Long using the position’s current <strong>$7,200</strong> net
+            equity.</p>
+          <small>The comparison deliberately rebases onto the equity that remains today, rather than the original
+            margin.</small>
+        </div>
+
+        <article class="media-story">
+          <div class="story-copy">
+            <span class="story-index">01</span>
+            <p class="kicker">Trade the liquidation line</p>
+            <h4>Less immediate upside than the perp. Far more room to be wrong.</h4>
+            <p>
+              The perp offers the strongest near-term upside, but another 20% ETH decline wipes out the remaining
+              equity. Spot removes that risk but gives up leveraged upside. V4 achieves the middle ground: at the same
+              −20% move it retains $4,608 while preserving substantially more upside potential than spot.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/perp-main.png"
+              data-caption="Perpetual scenario: full-range strategy response">
+              <img src="./assets/perp-main.png"
+                alt="V4 strategy compared with a perpetual long, spot ETH and the perp liquidation boundary"
+                loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>V4, the original perp and spot compared against the same ETH moves.</figcaption>
+          </figure>
+        </article>
+
+        <article class="media-story reverse">
+          <div class="story-copy">
+            <span class="story-index">02</span>
+            <p class="kicker">Rebase onto current equity</p>
+            <h4>Rebase the decision on the equity that remains.</h4>
+            <p>
+              The original perp leads through the early upside range, but V4 keeps building without its liquidation
+              boundary or ongoing funding drag. That makes a longer horizon viable and shifts the focus toward
+              recovering capital along the way.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/perp-breakdown.png"
+              data-caption="Perpetual scenario: position and outcome breakdown">
+              <img src="./assets/perp-breakdown.png"
+                alt="Perpetual position inputs, comparison table and V4 position breakdown" loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>The 4.17× perp exposure, $1,200 liquidation and $7,200 V4 deposit in one view.</figcaption>
+          </figure>
+        </article>
+
+        <article class="media-story">
+          <div class="story-copy">
+            <span class="story-index">03</span>
+            <p class="kicker">Recover the margin</p>
+            <h4>Recover the original $13,200, then keep the remaining position working.</h4>
+            <p>
+              With the longer horizon established, six 20% harvest checkpoints recover the full original $13,200 margin
+              by +180%, progressively taking capital back off the table without closing the position. At +500%, the
+              remaining V4 position has almost caught the original perp on its own, while total wealth has already moved
+              ahead, without the liquidation cliff or ongoing funding drag.
+            </p>
+          </div>
+          <figure>
+            <button class="image-button" data-lightbox="./assets/perp-harvest.png"
+              data-caption="Perpetual scenario: fastest capital recovery plan">
+              <img src="./assets/perp-harvest.png" alt="Perpetual scenario fastest capital recovery harvest plan"
+                loading="lazy" />
+              <span>Expand image</span>
+            </button>
+            <figcaption>Six 20% harvest checkpoints recover the original margin while maintaining the active V4 curve.
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing section-shell">
+      <div>
+        <p class="eyebrow"><span></span> Explore your own range</p>
+        <h2>Turn the examples into your scenario.</h2>
+        <p>Change the position, constraints and price targets in the live calculator, then inspect every curve and
+          equation.</p>
+      </div>
+      <a class="button button-primary" href="https://scuttl-e.github.io/v4-speculator-calculator/">Open the live
+        calculator <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="https://scuttl-e.github.io/v4-speculator-calculator/"><span
+        class="brand-mark">V4</span><span>V4 Speculator</span></a>
+    <p>Independent, unofficial and experimental. Not affiliated with or endorsed by Peapods Finance.</p>
+    <div class="footer-actions">
+      <a class="footer-credit" href="https://x.com/chainsandtrains" target="_blank" rel="noreferrer"
+        aria-label="Created by Scuttle.eth">
+        <span>CREATED BY-</span><strong>SCUTTLE.ETH</strong>
+      </a>
+      <a class="footer-github" href="https://github.com/Scuttl-E/v4-speculator-calculator" target="_blank"
+        rel="noreferrer">Source on GitHub ↗</a>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Expanded scenario image">
+    <form method="dialog"><button class="lightbox-close" aria-label="Close expanded image">×</button></form>
+    <img src="" alt="" />
+    <p></p>
+  </dialog>
+</body>
+
 </html>
