@@ -311,6 +311,8 @@ h1 {
 .notice-copy { min-width: 0; }
 .notice strong { display: block; color: #f1d8bf; font-size: clamp(17px, 1.4vw, 21px); line-height: 1.38; letter-spacing: .055em; }
 .notice p { margin: 9px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; }
+.notice-cta { display: inline-flex; align-items: center; gap: 8px; margin-left: 10px; color: var(--bright); font-size: 13px; font-weight: 700; letter-spacing: .08em; text-decoration: none; vertical-align: baseline; }
+.notice-cta:hover { color: var(--cream); }
 
 .section-shell { max-width: 1600px; margin: 0 auto; padding: 150px clamp(24px, 6vw, 108px); }
 .section-heading { max-width: 900px; }
@@ -347,6 +349,7 @@ h1 {
   grid-template-columns: minmax(260px, .3fr) minmax(0, .7fr);
   gap: clamp(42px, 5vw, 80px);
   padding: 58px 0 0;
+  scroll-margin-top: 24px;
 }
 .curve-note h3 { max-width: 440px; margin: 0; font-size: 31px; font-weight: 600; line-height: 1.16; letter-spacing: -.025em; }
 .curve-note-copy { max-width: 760px; color: var(--warm); font-size: 17px; line-height: 1.7; }
