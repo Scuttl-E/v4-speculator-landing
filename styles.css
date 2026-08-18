@@ -434,6 +434,19 @@ h1 {
 .modelled-position strong { font: 650 17px var(--mono); }
 .modelled-position span { margin: 0 7px; color: var(--bright); }
 .modelled-position small { color: var(--muted); font-size: 13px; line-height: 1.5; }
+.calculation-warning {
+  max-width: 760px;
+  margin: 18px auto 0;
+  padding: 11px 16px;
+  border: 1px solid #c85f5f66;
+  border-radius: 6px;
+  background: #c85f5f14;
+  color: #e69a9a;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.5;
+  text-align: center;
+}
 
 .media-story {
   display: grid;
